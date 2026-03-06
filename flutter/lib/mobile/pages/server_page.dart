@@ -927,6 +927,7 @@ void androidChannelInit() {
       debugPrintStack(label: "MethodCallHandler err:$e");
     }
     return "";
+  });
 }
 
 void setCustomTemporaryPasswordDialog(DialogManager dialogManager, String currentPassword, Function callback) {
