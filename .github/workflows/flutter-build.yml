@@ -710,6 +710,9 @@ jobs:
           cargo -V
           rustc -V
 
+      - name: Make build.py executable
+        run: chmod +x build.py
+
       - name: Build rustdesk
         run: |
           if [ "${{ matrix.job.target }}" = "aarch64-apple-darwin" ]; then
@@ -924,6 +927,9 @@ jobs:
           vcpkgDirectory: /opt/artifacts/vcpkg
           vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
           doNotCache: false
+
+      - name: Make build_android_deps.sh executable
+        run: chmod +x flutter/build_android_deps.sh
 
       - name: Install vcpkg dependencies
         run: |
